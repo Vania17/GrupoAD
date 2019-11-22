@@ -321,7 +321,7 @@ div#preloader {
 
 .main-menu ul.navbar-nav li.active a {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  color: #7C9EB2;
+  color: #fff !important;
   position: relative;
 }
 
