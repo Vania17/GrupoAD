@@ -176,6 +176,8 @@ Default Theme
 }
 .nivo-box img { display:block; }
 .nivo-caption {
+    display: flex;
+    align-items: center;
   position:absolute;
     left:0; 
     top:0;  

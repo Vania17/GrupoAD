@@ -263,7 +263,7 @@ div#preloader {
   left: 0;
   width: 100%;
   height: 100px !important;
-  background: rgba(46, 69, 100, 0.50);
+  background: rgba(46, 69, 100, 0.5);
   z-index: 9;
   display: flex;
   align-items: center;
@@ -294,6 +294,10 @@ div#preloader {
   letter-spacing: 1px;
 }
 
+.main-menu ul.navbar-nav li a:active{
+  color: #2E4564;
+}
+
 .main-menu ul.navbar-nav li.active > a::after {
   border: 1px solid #fff;
   bottom: 0px;
@@ -302,24 +306,52 @@ div#preloader {
   position: absolute;
   width: 100%;
 }
+.main-menu ul.navbar-nav li:hover{
+  background: #C6CCD4
+}
 
 .main-menu ul.navbar-nav li.active a:hover {
   background: none;
-  color: rgb(180, 208, 245);
+  color: rgb(148, 181, 224);
 }
 
 .main-menu ul.navbar-nav li.active a:focus {
-  color: #838785;
+  color: #fff;
 }
 
 .main-menu ul.navbar-nav li.active a {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  color: #fff;
+  color: #7C9EB2;
   position: relative;
 }
 
+.main-menu ul.dropdown-menu li a.dropdown-item{
+  color: white;
+}
+
+.main-menu ul.dropdown-menu li a.dropdown-item:hover{
+  color: #2E4564;
+}
+
 .main-menu ul.navbar-nav li a:hover {
-  color: #BED2E4;
+  color: #2E4564;
+}
+
+.main-menu ul.navbar-nav li.dropdown a:hover {
+  color: #2E4564;
+}
+
+.main-menu ul.navbar-nav li.dropdown.active.open a.dropdown-toggle{
+  color: #2E4564;
+}
+
+.main-menu ul.navbar-nav li.dropdown.active.open a.dropdown-toggle:visited{
+  color: #8D99AA;
+}
+
+.main-menu ul.navbar-nav li.dropdown.active.open a.dropdown-toggle:active{
+  color: #8D99AA;
+  background: #fff;
 }
 
 .navbar {
@@ -345,7 +377,7 @@ div#preloader {
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
   background-color: transparent;
-  color: #fff;
+  color: #2E4564;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
@@ -383,7 +415,7 @@ div#preloader {
 }
 
 .main-menu .dropdown ul li:hover {
-  background: #EDEDFA;
+  background:#C6CCD4;
 }
 
 /*--------------------------------*/
@@ -564,11 +596,11 @@ div#preloader {
 
 #about .about-col p {
   font-size: 14px;
-  line-height: 24px;
+  line-height: 30px;
   color: #161925;
   margin-bottom: 0;
   padding: 0 20px 20px 20px;
-  text-align: center;
+  text-align: justify;
 }
 
 .about-cols{
@@ -577,6 +609,29 @@ div#preloader {
 
 .info-about{
   text-align: justify;
+  line-height: 30px;
+}
+
+ul.values li::before{
+  content: "\2022";
+  color: #2E4564;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+
+.values{
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+
+ul.values li{
+  line-height:30px;
 }
 /*--------------------------------*/
 
@@ -1364,7 +1419,7 @@ div#preloader {
 }
 
 .home-overlyJob{
-  background:linear-gradient( rgba(28, 35, 33, 0.9) 100%, rgba(46, 69, 100, 0.9)100%),url("../img/catalogo/job.jpg");;
+  background:linear-gradient( rgba(46, 69, 100, 0.75) 100%, rgba(46, 69, 100, 0.8)100%),url("../img/about/working.jpg");;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -1373,28 +1428,41 @@ div#preloader {
   height: 100%;
   position: absolute;
   width: 100%;
-}
-
-.contact-spaceJob{
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-}
-
-.sal-pre{
-  display: inline;
-  width: 50%;
-}
+} 
 
 .job-area{
-  margin: 0 100px 0 100px;
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.row-job{
+.row-job-exp{
   display:flex;
-  justify-content: center;
+  justify-content:center;
 }
 
+.form-genre{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.row-job-cv{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.jobForm button[type="submit"]{
+    background: #2E4564 none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 20px;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    border-radius: 30px;
+}
 /*--------------------------------*/
 
 /*  14.Contact Area
@@ -1511,19 +1579,19 @@ div#preloader {
 }
 
 .home-overlyContact{
-  background:linear-gradient( rgba(28, 35, 33, 0.95) 100%, rgba(46, 69, 100, 0.95)100%),url("../img/about/contacto.jpg");;
+  background:linear-gradient( rgba(46, 69, 100, 0.75) 100%, rgba(46, 69, 100, 0.8)100%),url("../img/about/mensaje.jpg");;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center center;
+  background-position: right;
   height: 100%;
   position: absolute;
   width: 100%;
 }
 
 .contact-space{
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 50px;
 }
 
@@ -1542,12 +1610,17 @@ div#preloader {
   object-fit: cover;
 
 }
+
+.cont-ar-form{
+  display:flex;
+  flex-direction: column;
+}
 /*----------------------------------------*/
 
 /*  14. almPro Area
 /*----------------------------------------*/
 .home-overly-almPro{
-  background:linear-gradient( rgba(28, 35, 33, 0.9) 100%, rgba(46, 69, 100, 0.8)100%),url("../img/about/descarga.jpg");;
+  background:linear-gradient( rgba(46, 69, 100, 0.75) 100%, rgba(46, 69, 100, 0.8)100%),url("../img/about/descarga.jpg");;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -1567,7 +1640,7 @@ div#preloader {
 /*  14. distPro Area
 /*----------------------------------------*/
 .home-overly-distPro{
-  background:linear-gradient( rgba(28, 35, 33, 0.9) 100%, rgba(46, 69, 100, 0.8)100%),url("../img/about/descarga.jpg");;
+  background:linear-gradient( rgba(46, 69, 100, 0.75) 100%, rgba(46, 69, 100, 0.8)100%),url("../img/about/truck.jpg");;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -1583,7 +1656,7 @@ div#preloader {
 /*  14. renEsp Area
 /*----------------------------------------*/
 .home-overly-renEsp{
-  background:linear-gradient( rgba(28, 35, 33, 0.9) 100%, rgba(46, 69, 100, 0.8)100%),url("../img/about/descarga.jpg");;
+  background:linear-gradient( rgba(46, 69, 100, 0.75) 100%, rgba(46, 69, 100, 0.7)100%),url("../img/about/bodega.jpg");;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -1611,6 +1684,8 @@ div#preloader {
 
 .footer-head p {
   color: #161925;
+  line-height: 30px;
+  text-align: justify;
 }
 
 .footer-head h4 {
@@ -1750,11 +1825,11 @@ div#preloader {
 }
 
 .home-overly {
-  background:linear-gradient( rgba(28, 35, 33, 0.9) 100%, rgba(46, 69, 100, 0.8)100%),url("../img/about/descarga.jpg");;
+  background:linear-gradient( rgba(46, 69, 100, 0.75) 100%, rgba(46, 69, 100, 0.8)100%),url("../img/about/nosotros.jpg");;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center;
+  background-position: bottom right;
   background-color:;
   height: 100%;
   position: absolute;

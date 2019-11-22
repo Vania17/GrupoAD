@@ -20,6 +20,16 @@
 }
 
 /* Tablet desktop :768px. */
+@media (max-width:991px){
+  .portfolio-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .portfolio-item{
+    width: 500px;
+  }
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
   .main-menu ul.navbar-nav li {
@@ -27,10 +37,10 @@
     padding: 0 8px;
   }
   .layer-1-1 h2 {
-    font-size: 24px;
+    font-size: 20px;
   }
   .layer-1-2 h1 {
-    font-size: 31px;
+    font-size: 32px;
     line-height: 38px;
     padding: 0px 30px;
   }
@@ -114,34 +124,65 @@
   .search-option input {
     width: 67%;
   }
+  .nivoSlider img{
+    max-width:100%;
+    object-fit: cover;
+  }
 }
 
 /* small mobile :320px. */
 
 @media (max-width: 767px) {
-
+  .img-logo{
+    height: 50px;
+    object-fit: cover;
+  }
+  .sticky-logo img{
+    height: 50px;
+    margin: -2px 0 7px 0;
+  }
   .header-area {
     height: 60px !important;
-    background: #000;
+    background:  rgba(46, 69, 100, 1);
   }
+
+  .container{
+    width: inherit;
+  }
+
+  .navbar-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:60px;
+    background: rgba(46, 69, 100, 1);
+  }
+
   .navbar-header a.navbar-brand, .stick .navbar-header a.navbar-brand {
     display: inline-block;
     height: 60px  !important;
-    padding: 9px 0;
+    margin: 5px 35% 5px 0;
+    padding: 5px 0 5px 0;
   }
   .navbar-default .navbar-toggle, .stick .navbar-default .navbar-toggle {
-    padding: 15px 0;
+    
   }
   .nav.navbar-nav.navbar-right, .stick .nav.navbar-nav.navbar-right {
-    background-color: #252525;
+    background-color: rgba(46, 69, 100, 0.9);
     padding: 0;
     margin-top: 0;
   }
   .main-menu ul.navbar-nav li, .stick .main-menu ul.navbar-nav li {
-    display: block;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
   }
   .main-menu ul.navbar-nav li a, .stick .main-menu ul.navbar-nav li a {
     padding: 10px 2px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
   }
   .main-menu ul.navbar-nav li.active a::after, .stick .main-menu ul.navbar-nav li.active a::after {
     border: 0px solid #fff;
@@ -163,12 +204,12 @@
   }
 
   .slider-content h2 {
-    font-size: 18px !important;
-    line-height: 24px !important;
+    font-size: 18px;
+    line-height: 24px;
   }
   .slider-content h1 {
-    font-size: 20px !important;
-    line-height: 26px !important;
+    font-size: 30px;
+    line-height: 40px;
   }
 
   .layer-1-3 a.ready-btn {
@@ -269,6 +310,85 @@
   li.threaded-comments {
     margin-left: 0;
   }
+
+  .nivoSlider{
+    height:400px;
+  }
+
+  .navbar-collapse{
+    
+  }
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    border-color:rgba(46, 69, 100, 1);
+  }
+  .slider-area{
+    height:400px;
+  }
+  .form-genre{
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+  .footer-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .p-fo-inf{
+    width:300px;
+  }
+  .footer-logo{
+    width:300px;
+  }
+
+  .info-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: #fff;
+  }
+  .main-menu ul.navbar-nav li.active a:focus{
+    color:#fff;
+  }
+  .navbar-default{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left:0;
+    align-items: center;
+  }
+
+  .navbar-nav .open .dropdown-menu {
+    position: fixed;
+    margin-top: 0;
+    border: 0;
+    box-shadow: none;
+    top: 240px;
+    left: 0;
+    background-color: rgba(46, 69, 100, 1);
+    right: 0;
+    margin-left: 3%;
+    margin-right: 5%;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+    color: #fff;
+    padding-top: 10px;
+  }
+}
+
+
+@media screen and (max-width: 500px){
+  #portfolio{
+    background-size: cover;
+  }
+  .portfolio-item{
+    width:auto;
+  }
+  .portfolio-wrap{
+    width: auto; 
 }
 
 /* Large Mobile :480px. */
@@ -296,4 +416,19 @@
   .tab-menu ul.nav li a {
     padding: 8px 20px;
   }
+  .col-sm-3 {
+    width: 25%;
+  }
 }
+
+@media screen and (min-width: 320px) and (max-width: 400px){
+  .navbar-header a.navbar-brand, .stick .navbar-header a.navbar-brand {
+    display: inline-block;
+    height: 60px  !important;
+    margin: 5px 20% 5px 0;
+    padding: 5px 0 5px 0;
+  }
+}
+
+
+
