@@ -29,18 +29,6 @@
     }
   });
 
-  $(window).on('scroll', function() {
-    var windowpos = $(window).scrollTop() > 300;
-    if (windowpos > pos.top) {
-      s.addClass("stick");
-      s.addClass("sticky-logo");
-      s.removeClass("img-logo");
-    } else {
-      s.removeClass("stick");
-      s.removeClass("sticky-logo");
-      s.addClass("img-logo");
-    }
-
     
   /*----------------------------
    Navbar nav
